@@ -1,0 +1,40 @@
+{
+  "name": "js-utf8",
+  "version": "0.0.1",
+  "description": "js-utf8 is UTF-8 encoder/decoder written in JavaScript.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "npm run lint && tsc",
+    "lint": "eslint . --ext .js,.ts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nashaofu/js-utf8.git"
+  },
+  "keywords": [
+    "utf8",
+    "encode",
+    "decode",
+    "toBytes",
+    "toString"
+  ],
+  "author": "nashaofu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nashaofu/js-utf8/issues"
+  },
+  "homepage": "https://github.com/nashaofu/js-utf8#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "typescript": "^3.5.3"
+  }
+}
