@@ -17,4 +17,19 @@ const bytes = toBytes(str)
 const raw = toString(bytes)
 
 console.log(bytes, raw, raw === str)
+// [ 53, 54, 32, 228, 189, 160, 229, 165, 189, 32, 240, 159, 154, 128 ] '56 你好 🚀' true
+```
+
+## API
+
+- toBytes: Convert string to UTF8 encoding array
+
+```ts
+toBytes: (raw: string) => number[]
+```
+
+- toString: Convert UTF8 encoding array to string
+
+```ts
+toString: (bytes: number[]): string
 ```
