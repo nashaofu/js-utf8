@@ -1,6 +1,6 @@
 {
   "name": "js-utf8",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "js-utf8 is a UTF-8 encoder/decoder for Nodejs and Browser",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
