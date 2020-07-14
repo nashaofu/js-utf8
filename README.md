@@ -9,27 +9,41 @@ js-utf8 is a UTF-8 encoder/decoder for Nodejs and Browser
 ## Usage
 
 ```js
-import { toBytes, toString } from 'js-utf8'
+import { toArray, toString } from 'js-utf8'
 
-const str = `56\u0020你好 🚀`
+const raw = '56\u0020你好 🚀'
 
-const bytes = toBytes(str)
-const raw = toString(bytes)
+const arr = toArray(raw)
+const str = toString(arr)
 
-console.log(bytes, raw, raw === str)
-// [ 53, 54, 32, 228, 189, 160, 229, 165, 189, 32, 240, 159, 154, 128 ] '56 你好 🚀' true
+console.log('raw:', raw)
+console.log('arr:', arr)
+console.log('str: ', str)
+console.log('raw === str: ', raw === str)
+// raw: 56 你好 🚀
+// arr: [
+//   [ 53 ],
+//   [ 54 ],
+//   [ 32 ],
+//   [ 228, 189, 160 ],
+//   [ 229, 165, 189 ],
+//   [ 32 ],
+//   [ 240, 159, 154, 128 ]
+// ]
+// str:  56 你好 🚀
+// raw === str:  true
 ```
 
 ## API
 
-- toBytes: Convert string to UTF8 encoding array
+- toArray: convert string to utf8 encoded byte array
 
 ```ts
-toBytes: (raw: string) => number[]
+function toArray (str: string): Array<number[]>
 ```
 
-- toString: Convert UTF8 encoding array to string
+- toString: convert utf8 encoded byte array to string
 
 ```ts
-toString: (bytes: number[]): string
+function toString (arr: Array<number[]>): string
 ```

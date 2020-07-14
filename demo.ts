@@ -1,8 +1,11 @@
-import { toBytes, toString } from './src'
+import { toArray, toString } from './src'
 
-const str = '56\u0020你好 🚀'
+const raw = '56\u0020你好 🚀'
 
-const bytes = toBytes(str)
-const raw = toString(bytes)
+const arr = toArray(raw)
+const str = toString(arr)
 
-console.log(bytes, raw, raw === str)
+console.log('raw:', raw)
+console.log('arr:', arr)
+console.log('str: ', str)
+console.log('raw === str: ', raw === str)
